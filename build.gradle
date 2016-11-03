@@ -26,9 +26,17 @@ repositories {
 }
 
 dependencies {
-    compile('org.springframework.boot:spring-boot-starter-cache')
-    compile('org.infinispan:infinispan-spring4-embedded:8.2.4.Final')
-    //compile('com.hazelcast:hazelcast-spring:3.6.5')
     compile('org.springframework.boot:spring-boot-devtools')
+    compile('org.springframework.boot:spring-boot-starter-cache')
+    //compile('javax.cache:cache-api:1.0.0')
+    //compile('org.ehcache:ehcache:3.1.2')
+    //compile('net.sf.ehcache:ehcache:2.10.3')
+    //compile('com.hazelcast:hazelcast-spring:3.6.5')
+    //compile('org.infinispan:infinispan-spring4-embedded:8.2.4.Final')
+    //compile('org.infinispan:infinispan-jcache:8.2.4.Final')
+    //compile('com.couchbase.client:java-client')
+    //compile('com.couchbase.client:couchbase-spring-cache')
+    //compile('org.springframework.boot:spring-boot-starter-data-redis')
+    //compile('com.github.ben-manes.caffeine:caffeine:2.3.4')
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }

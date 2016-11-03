@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 /**
  * Created by Sehwan Noh on 11/1/16.
  */
-@Component
+//@Component
 public class BookCacheRunner implements CommandLineRunner {
 
     private static final Logger logger = LoggerFactory.getLogger(BookCacheRunner.class);
