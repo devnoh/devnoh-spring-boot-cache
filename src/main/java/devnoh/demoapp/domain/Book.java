@@ -1,9 +1,11 @@
-package devnoh.demoapp;
+package devnoh.demoapp.domain;
+
+import java.io.Serializable;
 
 /**
  * Created by Sehwan Noh on 11/1/16.
  */
-public class Book {
+public class Book implements Serializable {
 
     private String isbn;
     private String title;
@@ -31,6 +33,9 @@ public class Book {
 
     @Override
     public String toString() {
-        return "Book{" + "isbn=" + isbn + ", title=" + title + "}";
+        return "Book{" +
+                "isbn='" + isbn + '\'' +
+                ", title='" + title + '\'' +
+                '}';
     }
 }
