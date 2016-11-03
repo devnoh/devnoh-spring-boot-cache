@@ -277,7 +277,7 @@ public class CountryRepositoryImpl implements CountryRepository {
         countries.add(country);
     }
 
-    @Cacheable(value="countries")
+    @Cacheable(value="countries", key="#code")
     public Country findByCode(String code) {
         logger.info("Finding country by code '{}'...", code);
         simulateSlowService();
