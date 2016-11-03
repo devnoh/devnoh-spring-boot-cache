@@ -2,7 +2,7 @@ package devnoh.demoapp;
 
 import devnoh.demoapp.domain.Country;
 import devnoh.demoapp.repository.CountryRepository;
-import org.assertj.core.util.Compatibility;
+import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +12,9 @@ import org.springframework.cache.CacheManager;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import static org.assertj.core.api.Java6Assertions.assertThat;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertNull;
 
 /**
  * Created by Sehwan Noh on 11/2/16.
@@ -29,15 +32,15 @@ public class CountryCacheTest {
     @Test
     public void validateCache() {
         Cache cache = cacheManager.getCache("countries");
-        assertThat(cache).isNotNull();
+        assertNotNull(cache);
         cache.clear(); // Simple test assuming the cache is empty
-        assertThat(cache.get("US")).isNull();
+        assertNull(cache.get("US"));
 
         Country found = countryRepository.findByCode("US");
         System.out.println("found=" + found);
         Country cached = (Country) cache.get("US").get();
         System.out.println("cached=" + cached);
 
-        assertThat(cached).isEqualTo(found);
+        assertEquals(cached, found);
     }
 }

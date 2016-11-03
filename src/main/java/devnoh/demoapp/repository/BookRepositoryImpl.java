@@ -24,7 +24,7 @@ public class BookRepositoryImpl implements BookRepository {
 
     private void simulateSlowService() {
         try {
-            long time = 1000L;
+            long time = 2000L;
             Thread.sleep(time);
         } catch (InterruptedException e) {
             throw new IllegalStateException(e);
