@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hazelcast
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.hazelcast.com/schema/config"
+        xsi:schemaLocation="http://www.hazelcast.com/schema/config http://www.hazelcast.com/schema/config/hazelcast-config-3.6.xsd">
+
+    <map name="books">
+        <time-to-live-seconds>600</time-to-live-seconds>
+        <max-size>200</max-size>
+    </map>
+
+    <map name="countries">
+        <time-to-live-seconds>600</time-to-live-seconds>
+        <max-size>250</max-size>
+    </map>
+
+    <!--
+    <cache name="books">
+        <eviction size="200"/>
+        <statistics-enabled>true</statistics-enabled>
+        <management-enabled>true</management-enabled>
+    </cache>
+
+    <cache name="countries">
+        <eviction size="250"/>
+        <statistics-enabled>true</statistics-enabled>
+        <management-enabled>true</management-enabled>
+    </cache>
+    -->
+
+</hazelcast>
